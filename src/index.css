@@ -23,7 +23,7 @@ body {
 }
 
 .card-front {
-  background: url("public/bg-card-front.png");
+  background: url("image/card-front.png");
   top: 20%;
   left: 20%;
   z-index: 100;
