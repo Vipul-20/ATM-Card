@@ -2,25 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATM-Card | Interactive card details form</title>
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="public/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="src/index.css" />
+
+    <title>ATM-Card | Interactive card details form</title>
+
+    <link rel="stylesheet" href="./src/index.css" />
   </head>
   <body>
     <main>
       <div id="card-background">
         <div class="card card-front">
-          <img src="public/bg-card-front.png" alt="card-logo" />
+          <img src="public/card-logo.png" alt="card-logo" />
           <h1 id="card-number">0000 0000 0000 0000</h1>
           <div class="flex-row">
-            <span id="holder-name-text">Jane Appleseed</span>
+            <span id="holder-name-text">XXXXXXXXXXXX</span>
             <span id="exp-date">00/00</span>
           </div>
         </div>
@@ -39,7 +41,7 @@
             <input
               class=""
               id="holder-name-input"
-              placeholder="e.g. Jane Appleseed"
+              placeholder="e.g. Enter your name"
               type="text"
             />
             <span id="holder-error" class="error"></span>
@@ -102,9 +104,8 @@
     </main>
     <footer class="attribution">
       Coded by
-      <a href="#" target="_blank">Vipul Prajapati</a>.
+      <a href="#" target="_blank">Sarthak Sachdev</a>.
     </footer>
-
-    <script type="module" src="src/main.js"></script>
+    <script src="src/main.js"></script>
   </body>
 </html>

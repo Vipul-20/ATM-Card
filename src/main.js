@@ -1,3 +1,4 @@
+
 const cardNumberText = document.getElementById("card-number");
 const holderNameText = document.getElementById("holder-name-text");
 const expirationDate = document.getElementById("exp-date");
@@ -16,3 +17,62 @@ const successDialog = document.getElementById("success-dialog");
 const continueBtn = document.getElementById("continue-btn");
 
 
+const nameValidation = () => {
+    let isNameValid = true;
+    let isNumberValid = true;
+    let isDateValid = true;
+    let isCvcValid = true;
+    let isFormValid;
+
+    const holderName = holderNameInput.value;
+    const cvc = cvcInput.value;
+    const holderNumber = holderCardNumberInput.value;
+
+    // Regular expressions
+    const nameRegex = /[0-9]+/i; // Only letters and spaces
+    const numberRegex = /[0-9]+/i;// Only numbers
+
+
+    if (nameRegex.test(holderName)) {
+        holderError.innerText = "Wrong format, text only";
+        isNameValid = false;
+
+    // Name validation
+    } if (!holderName) {
+        holderError.innerText = "Can't be blank";
+        isNameValid = false;
+    }
+
+    if (!numberRegex.test(holderNumber)) {
+        cardNumberError.innerText = "Wrong format, numbers only";
+        isNumberValid = false;
+    }
+    if (!holderNumber) {
+        cardNumberError.innerText = "Can't be blank";
+        isNumberValid = false;
+    }
+
+    if (!numberRegex.test(month.value) || !numberRegex.test(year.value)) {
+        dateError.innerText = "Wrong format, numbers only";
+    }
+
+     // Expiry date validation (month and year)
+    if (!month.value || !year.value) {
+        dateError.innerText = "Can't be blank";
+        isDateValid = false;
+    }
+
+
+    // CVC validation
+    if (!cvc) {
+        cvcError.innerText = "Can't be blank";
+        isCvcValid = false;
+    }
+
+    if (isCvcValid && isDateValid && isNameValid && isNumberValid) {
+        isFormValid = true;
+    } else {
+        isFormValid = false;
+    }
+    return isFormValid;
+}
