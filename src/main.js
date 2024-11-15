@@ -1,4 +1,4 @@
-
+// DOM elements
 const cardNumberText = document.getElementById("card-number");
 const holderNameText = document.getElementById("holder-name-text");
 const expirationDate = document.getElementById("exp-date");
