@@ -95,3 +95,10 @@ cardForm.addEventListener("submit", (e) => {
         return;
     }
 })
+
+
+// continue button event
+continueBtn.addEventListener("click", () => {
+    successDialog.classList.add("hidden");
+    cardForm.classList.remove("hidden");
+})
