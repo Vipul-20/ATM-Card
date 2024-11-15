@@ -76,3 +76,22 @@ const nameValidation = () => {
     }
     return isFormValid;
 }
+
+// form submission event
+cardForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (nameValidation()) {
+        holderNameText.innerText = holderNameInput.value;
+        // month aur year ki values le raha hai, aur unhe${month}/${year}format meinexpirationDate` element mein display kar raha hai.
+        expirationDate.innerText = `${monthInput.value}/${yearInput.value}`;
+        // vcInput se CVC ki value le raha hai aur cvcText element mein show kar raha hai.
+        cvcText.innerText = cvcInput.value;
+        const holderCardNumber = holderCardNumberInput.value.replace(" ", "").match(/.{1,4}/g).join(" ");
+        cardNumberText.innerText = holderCardNumber;
+        cardForm.classList.add("hidden");
+        successDialog.classList.remove("hidden");
+    } else {
+        alert("Please fill the form properly.");
+        return;
+    }
+})
