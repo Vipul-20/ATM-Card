@@ -285,10 +285,15 @@ main {
   #exp-date {
     min-width: max-content;
   }
-  #success-dialog {
-    display: inline-block;
+  
+  #success-dialog{
     text-align: center;
-    margin-left: 140px;
+    margin-left: 109px;
     font-size: 15px;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    width: 142%;
+    padding: 1rem;
+    border-radius: 5px;
   }
 }
